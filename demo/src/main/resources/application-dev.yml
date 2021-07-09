@@ -1,0 +1,20 @@
+server:
+  port: 8000
+
+logging:
+  config: classpath:log4j2-boot-dev.xml
+
+spring:
+  datasource:
+    jpa:
+      type: com.zaxxer.hikari.HikariDataSource
+      driverClassName: com.mysql.jdbc.Driver
+      jdbcUrl: jdbc:mysql://*.*.*.*/sbtest?useUnicode=true&autoReconnect=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+      username: sbtest
+      password: sbtest
+      maxActive: 50
+      maxIdel: 120
+      maxWait: 100
+      testWhileIdle: true
+      timeBetweenEvictionRunsMillis: 3600000
+      filters: config
