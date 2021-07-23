@@ -2,6 +2,7 @@ package com.sbstest.Controller;
 
 import com.sbstest.Dao.Entity.UserEntity;
 import com.sbstest.Dao.Mybatis.UserDao;
+import com.sbstest.Service.RedisServiceImpl;
 import com.sbstest.Service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +26,9 @@ public class HelloController {
     private UserService userService;
 
     @Autowired
+    private RedisServiceImpl redisService;
+
+    @Autowired
     private UserDao userDao;
 
     @RequestMapping(name = "/hello",method = RequestMethod.GET)
@@ -36,6 +40,8 @@ public class HelloController {
 
         UserEntity userEntity = userDao.selectByName("123");
         logger.info(userEntity.getOld());
+
+        redisService.set("test","test123",10L);
 
         return "Hello World";
     }

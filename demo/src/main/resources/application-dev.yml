@@ -9,7 +9,7 @@ spring:
     jpa:
       type: com.zaxxer.hikari.HikariDataSource
       driverClassName: com.mysql.jdbc.Driver
-      jdbcUrl: jdbc:mysql://119.45.127.27/sbtest?useUnicode=true&autoReconnect=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+      jdbcUrl: jdbc:mysql://119.45.127.27/sbtest?useUnicode=true&autoReconnect=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
       username: sbtest
       password: sbtest
       maxActive: 50
@@ -22,7 +22,7 @@ spring:
     mybatis:
       type: com.zaxxer.hikari.HikariDataSource
       driverClassName: com.mysql.jdbc.Driver
-      jdbcUrl: jdbc:mysql://119.45.127.27/sbtest?useUnicode=true&autoReconnect=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+      jdbcUrl: jdbc:mysql://119.45.127.27/sbtest?useUnicode=true&autoReconnect=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
       username: sbtest
       password: sbtest
       maxActive: 50
@@ -30,3 +30,18 @@ spring:
       maxWait: 100
       testWhileIdle: true
       timeBetweenEvictionRunsMillis: 3600000
+
+  redis:
+#    host: 119.45.127.27
+#    port: 26379
+    database: 0
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+    timeout: 2000ms
+    sentinel:
+      master: s20master
+      nodes: 119.45.127.27:26379
