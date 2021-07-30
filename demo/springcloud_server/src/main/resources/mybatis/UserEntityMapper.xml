@@ -2,10 +2,10 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.demo.Dao.Mybatis">
+<mapper namespace="com.example.demo.Dao.Mybatis.UserDao">
     <select id="selectByName"
             parameterType="java.lang.String"
-            resultType="com.example.demo.Dao.Entity">
+            resultType="com.example.demo.Dao.Entity.UserEntity">
         select
         a.id as id,
         a.name as name,

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
  * Created by 21510 on 2021/7/9.
  */
 @Repository
-public interface UserEntityRebository extends JpaRepository<UserEntity,String>,JpaSpecificationExecutor<UserEntity>{
+public interface UserEntityRepository extends JpaRepository<UserEntity,String>,JpaSpecificationExecutor<UserEntity>{
 
     UserEntity findByName(String name);
 

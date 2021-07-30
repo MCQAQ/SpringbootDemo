@@ -2,7 +2,7 @@ package com.example.demo.Service;
 
 
 import com.example.demo.Dao.Entity.UserEntity;
-import com.example.demo.Dao.Repository.UserEntityRebository;
+import com.example.demo.Dao.Repository.UserEntityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,11 +17,11 @@ import java.util.List;
 public class UserService {
 
     @Autowired
-    private UserEntityRebository userEntityRebository;
+    private UserEntityRepository userEntityRepository;
 
     public List<UserEntity> getByName(String s) {
 //        return userEntityRebository.findByName(s);
-        return userEntityRebository.findAll((root , query, builder) -> {
+        return userEntityRepository.findAll((root , query, builder) -> {
             query.distinct(true);
             Predicate predicate = builder.disjunction();
 

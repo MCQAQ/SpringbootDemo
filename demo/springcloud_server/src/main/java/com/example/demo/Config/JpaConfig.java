@@ -49,7 +49,7 @@ public class JpaConfig {
         return builder
                 .dataSource(jpaDataSource)
                 .properties(jpaProperties.getHibernateProperties(new HibernateSettings()))
-                .packages("com.sbstest.Dao.Entity")
+                .packages("com.example.demo.Dao.Entity")
                 .persistenceUnit("jpaPersistenceUnit")
                 .build();
     }
