@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud_client" />
         <module name="springcloud_server" />
+        <module name="springcloudeuraka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -15,6 +16,7 @@
       <module name="SpringbootDemo" target="1.8" />
       <module name="springcloud_client" target="1.8" />
       <module name="springcloud_server" target="1.8" />
+      <module name="springcloudeuraka" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
