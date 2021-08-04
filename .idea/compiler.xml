@@ -6,12 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo" />
+        <module name="springcloud_client" />
+        <module name="springcloud_server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="demo" target="1.8" />
       <module name="SpringbootDemo" target="1.8" />
+      <module name="springcloud_client" target="1.8" />
+      <module name="springcloud_server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
