@@ -6,6 +6,7 @@
     <modules>
         <module>springcloud_server</module>
 		<module>springcloud_client</module>
+		<module>springcloudeuraka</module>
     </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
@@ -45,7 +46,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-dependencies</artifactId>
-			<version>Dalston.SR5</version>
+			<version>Finchley.SR4</version>
 			<type>pom</type>
 			<scope>runtime</scope>
 		</dependency>
