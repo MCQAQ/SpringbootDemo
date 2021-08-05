@@ -37,7 +37,7 @@ public class HelloController {
     @Autowired
     private UserDao userDao;
 
-    @RequestMapping(name = "/hello",method = RequestMethod.GET)
+    @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public String getHello(){
         logger.info("test log");
 

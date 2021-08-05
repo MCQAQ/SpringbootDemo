@@ -4,10 +4,6 @@ server:
 logging:
   config: classpath:log4j2-boot-dev.xml
 
-spring:
-  application:
-    name: cloud-provider-8000
-
 eureka:
   client:
     service-url:
@@ -17,6 +13,8 @@ eureka:
     instance-id: cloud-provider-8000
 
 spring:
+  application:
+    name: cloud-provider-8000
   datasource:
     jpa:
       type: com.zaxxer.hikari.HikariDataSource

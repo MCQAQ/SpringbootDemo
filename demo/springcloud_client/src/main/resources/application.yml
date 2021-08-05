@@ -1,7 +1,22 @@
 server:
   port: 8001
 
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka/
+    register-with-eureka: false
+
+spring:
+  application:
+    name: spring-cloud-8001
+  output:
+    ansi:
+      enabled: always
+
+feign:
+  hystrix:
+    enabled: true
+
+
