@@ -1,0 +1,21 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: api-gateway
+
+zuul:
+  routes:
+    hello-service:
+      path: /hello-service/**
+      serviceId: CLOUD-PROVIDER-8000
+ribbon:
+  ReadTimeout: 120000  #请求处理的超时时间
+  ConnectTimeout: 30000  #请求连接的超时时间
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+
+
