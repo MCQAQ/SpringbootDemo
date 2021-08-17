@@ -55,3 +55,16 @@ spring:
 #    sentinel:
 #      master: s20master
 #      nodes: 119.45.127.27:26379
+
+
+#RocketMQ服务提供者
+rocketmq:
+  producer:
+    isOnOff: on
+    groupName: cloud-provider-8000
+    namesrvAddr: 119.45.127.27:9876
+    maxMessageSize: 4096
+    sendMsgTimeout: 3000
+    retryTimesWhenSendFailed: 2
+
+
