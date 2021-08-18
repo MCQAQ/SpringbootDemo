@@ -1,6 +1,9 @@
 package com.example.demo;
 
 import com.example.demo.Controller.HelloController;
+import org.apache.rocketmq.client.exception.MQBrokerException;
+import org.apache.rocketmq.client.exception.MQClientException;
+import org.apache.rocketmq.remoting.exception.RemotingException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +21,7 @@ public class DemoApplicationTests {
 	HelloController helloController;
 
 	@Test
-	public void contextLoads() {
+	public void contextLoads() throws InterruptedException, RemotingException, MQClientException, MQBrokerException {
 		Assert.assertThat(helloController.getHello(),is("Hello World"));
 	}
 

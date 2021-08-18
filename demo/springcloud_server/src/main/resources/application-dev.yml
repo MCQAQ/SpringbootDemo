@@ -64,7 +64,7 @@ rocketmq:
     groupName: cloud-provider-8000
     namesrvAddr: 119.45.127.27:9876
     maxMessageSize: 4096
-    sendMsgTimeout: 3000
+    sendMsgTimeout: 5000
     retryTimesWhenSendFailed: 2
 
 
